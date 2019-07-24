@@ -22,7 +22,7 @@
                 "answer": "2"
             },
             {
-                "question": "Which2 HTML element can contain JavaScript?",
+                "question": "Which HTML element can contain JavaScript?",
                 "hint": "It starts with an \"s\"",
                 "answer": "<script>"
             }
