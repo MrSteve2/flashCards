@@ -1,8 +1,25 @@
-extends layout.pug
+//- extends layout.pug
 
-block content
-  section#content
-    h2 Welcome #{name}!
-    form(action='/goodbye', method='post')
-      button(type='submit') Goodbye
+doctype html
+html(lang='en')
+  head
+    title Flash Cards
+    link(rel='stylesheet', href='/static/stylesheets/style.css')
+  body
+    header
+      img(src='/static/img/logo.png')
+      p An app to help you study
+    section.namecard
+      .namecard-hello
+        p.namecard-greeting Welcome, #{name}
+        form.namecard-exit(action='/goodbye', method='POST')
+          button(type='submit')
+            img(src='/static/img/close.svg')
+      h1.namecard-prompt Let's get started
+      a.namecard-submit(href='/cards') Begin!
+//- block content
+//-   section#content
+//-     h2 Welcome #{name}!
+//-     form(action='/goodbye', method='post')
+//-       button(type='submit') Goodbye
 

@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
     const flashCardId = Math.floor(Math.random() * cards.length)
     res.redirect(`/cards/${flashCardId}?side=question`)
 })
+
 router.get('/:id', (req, res) => {
     let side = req.query.side
     const id = req.params.id
@@ -37,7 +38,7 @@ router.get('/:id', (req, res) => {
         templateData.sideToShow = "question"
     }
 
-    res.render('card', templateData)
+    res.render('cards3', templateData)
 })
 
 module.exports = router

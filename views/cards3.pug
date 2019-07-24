@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    title Flash Cards
+    link(rel='stylesheet', href='/static/stylesheets/style.css')
+  body
+    header
+      img(src='/static/img/logo.png')
+      p An app to help you study
+    section.namecard
+      .namecard-hello
+        p.namecard-greeting Welcome, John!
+        form.namecard-exit(action='/goodbye', method='POST')
+          button(type='submit')
+            img(src='/static/img/close.svg')
+    section.flashcards
+      .card.card-question
+        .card-header
+        h1.card-title Question
+        #content
+          h2= text
+          p#hint
+            i= hint
+        .card-flip-wrap
+          a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+        .card-next
+          a(href='/cards')
+            img(src='/static/img/next.svg')
