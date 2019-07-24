@@ -10,20 +10,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cookieParser());
 
-// app.use((req, res, next) => {
-//         console.log('One')
-//         next()
-//     },
-//     (req, res, next) => {
-//         console.log('One.5')
-//         next()
-//     })
-
-// app.use((req, res, next) => {
-//     req.message = 'THis message made it'
-//     console.log(req.message)
-//     next()
-// })
+app.use('/static', express.static('public'))
 
 const mainRoutes = require('./routes')
 const cardRoutes = require('./routes/cards')
