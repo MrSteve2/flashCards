@@ -14,9 +14,11 @@ app.use('/static', express.static('public'))
 
 const mainRoutes = require('./routes')
 const cardRoutes = require('./routes/cards')
+const projectRoutes = require('./routes/projects')
 
 app.use(mainRoutes)
 app.use('/cards', cardRoutes)
+app.use('/projects', projectRoutes)
 app.listen(3000, () => {
     console.log('app running on port 3000')
 })
